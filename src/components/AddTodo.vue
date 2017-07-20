@@ -1,8 +1,12 @@
 
 <template>
-  <div>
-    <input type="text" v-model="text"/>
-    <button v-on:click="handleClick()">Add</button> 
+  <div class="field has-addons">
+    <div class="control">
+      <input type="text" class="input" v-model="text"/>
+    </div>
+    <div class="control">
+      <button class="button is-primary" v-on:click="handleClick()">Add</button> 
+    </div>
   </div>
 </template>
 
@@ -20,6 +24,7 @@ export default {
     handleClick () {
       store.isLoading = true
       addTodo(this.text).then(() => {
+        this.text = ''
         store.isLoading = false
       })
     }
