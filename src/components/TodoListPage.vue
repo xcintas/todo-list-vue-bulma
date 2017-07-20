@@ -3,7 +3,7 @@
   <div>
     <h1 class="title">Todo list</h1>
     <div class="columns">
-      <div class="column is-4">    
+      <div class="column is-4">
         <TodoList></TodoList>
         <AddTodo></AddTodo>
       </div>
@@ -16,9 +16,6 @@ import TodoList from './TodoList.vue'
 import AddTodo from './AddTodo.vue'
 
 export default {
-  data () {
-    return {}
-  },
   components: {
     TodoList,
     AddTodo

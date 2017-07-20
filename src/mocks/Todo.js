@@ -14,7 +14,7 @@ let getTodos = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(todos)
-    }, 100)
+    }, defaultTimeout)
   })
 }
 

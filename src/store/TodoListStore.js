@@ -1,4 +1,4 @@
-const store = {
+let store = {
   todos: [],
   isLoading: false
 }
