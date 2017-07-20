@@ -8,6 +8,7 @@
 
 <script>
 import { addTodo } from '@/mocks/Todo'
+import store from '@/store/TodoListStore'
 
 export default {
   data () {
@@ -17,7 +18,10 @@ export default {
   },
   methods: {
     handleClick () {
-      addTodo(this.text)
+      store.isLoading = true
+      addTodo(this.text).then(() => {
+        store.isLoading = false
+      })
     }
   }
 }
